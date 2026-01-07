@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sukhvinder Singh | IT Service Delivery & Operations</title>
+  <meta name="description" content="Senior IT Service Delivery & Operations Leader. SLA improvement, ITIL governance, vendor management, security controls, cloud and modern workplace." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1220;
+      --card: rgba(255,255,255,0.07);
+      --card2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.68);
+      --faint: rgba(255,255,255,0.12);
+      --accent1:#6EE7FF;
+      --accent2:#A78BFA;
+      --accent3:#34D399;
+      --shadow: 0 18px 60px rgba(0,0,0,0.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 900px at 20% 5%, rgba(167,139,250,0.25), transparent 55%),
+                  radial-gradient(1100px 900px at 80% 15%, rgba(110,231,255,0.20), transparent 55%),
+                  radial-gradient(900px 700px at 50% 80%, rgba(52,211,153,0.12), transparent 60%),
+                  linear-gradient(180deg, var(--bg0), var(--bg1));
+      color: var(--text);
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Top nav */
+    .nav{
+      position: sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,10,18,0.75), rgba(7,10,18,0.35));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .navbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .dot{
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(110,231,255,0.08);
+    }
+    .links{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .links a{
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 9px 10px;
+      border-radius: 999px;
+      transition: 160ms ease;
+    }
+    .links a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,0.08);
+    }
+    .cta{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .btn{
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: 160ms ease;
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      cursor:pointer;
+    }
+    .btn:hover{
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-1px);
+    }
+    .btn.primary{
+      border: 0;
+      background: linear-gradient(135deg, rgba(110,231,255,0.95), rgba(167,139,250,0.92));
+      color: #071018;
+      box-shadow: 0 14px 40px rgba(167,139,250,0.18);
+    }
+
+    /* Hero */
+    .hero{ padding: 54px 0 22px; }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .panel{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroMain{
+      padding: 28px;
+      position:relative;
+      min-height: 420px;
+    }
+    .badgeRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      margin-bottom: 18px;
+    }
+    .badge{
+      font-size: 12px;
+      color: var(--text);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .h1{
+      font-size: clamp(34px, 4.1vw, 54px);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      letter-spacing: -0.7px;
+      font-weight: 900;
+    }
+    .lead{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 62ch;
+    }
+    .heroActions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .spark{
+      position:absolute;
+      right:-120px;
+      top:-140px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle at 30% 30%, rgba(110,231,255,0.35), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(167,139,250,0.32), transparent 60%),
+                  radial-gradient(circle at 45% 65%, rgba(52,211,153,0.20), transparent 60%);
+      filter: blur(2px);
+      opacity: 0.9;
+      pointer-events:none;
+    }
+
+    .heroSide{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      padding: 16px;
+    }
+    .photo{
+      border-radius: 22px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      position:relative;
+      min-height: 250px;
+      background: rgba(255,255,255,0.04);
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter: contrast(1.02) saturate(1.05);
+      transform: scale(1.02);
+    }
+    .photoOverlay{
+      position:absolute;
+      inset:0;
+      background: radial-gradient(900px 400px at 20% 0%, rgba(0,0,0,0.00), rgba(0,0,0,0.55));
+      display:flex;
+      align-items:flex-end;
+      padding: 14px;
+    }
+    .photoTag{
+      font-size: 12px;
+      color: rgba(255,255,255,0.88);
+      background: rgba(0,0,0,0.38);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 10px;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+      font-weight: 700;
+    }
+
+    .quickStats{
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      padding: 14px;
+      display:grid;
+      gap: 10px;
+    }
+    .statRow{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .statRow .k{
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .statRow .v{
+      font-weight: 800;
+      font-size: 13px;
+      text-align:right;
+    }
+
+    /* Sections */
+    section{ padding: 34px 0; }
+    .sectionTitle{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -0.3px;
+      font-weight: 900;
+    }
+    .sectionTitle p{
+      margin:0;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 70ch;
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      box-shadow: 0 12px 40px rgba(0,0,0,0.32);
+      padding: 16px;
+      position:relative;
+      overflow:hidden;
+      transition: 160ms ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.16);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    }
+    .card h3{ margin: 0 0 8px; font-size: 16px; font-weight: 900; }
+    .card p{ margin:0; color: var(--muted); font-size: 14px; line-height: 1.7; font-weight: 600; }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tag{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.84);
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* Experience */
+    .timeline{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .role{
+      display:grid;
+      grid-template-columns: 1fr 240px;
+      gap: 12px;
+      align-items:start;
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+    .role h3{ margin:0 0 6px; font-size: 16px; font-weight: 900; }
+    .role .meta{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+    .bullets{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.84);
+      font-size: 14px;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+    .aside{
+      text-align:right;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 800;
+    }
+
+    /* Case studies */
+    .caseImage{
+      width:100%;
+      height: 190px;
+      border-radius: 14px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      margin-top: 12px;
+    }
+    .caseImage img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .pill{
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(110,231,255,0.10);
+      border: 1px solid rgba(110,231,255,0.22);
+      color: rgba(255,255,255,0.88);
+      white-space:nowrap;
+    }
+    .caseHead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .caseContext{
+      margin:0 0 10px;
+      color: rgba(255,255,255,0.72);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+    .subTitle{
+      font-weight: 900;
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+    .miniList{
+      margin:0;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    /* Achievements */
+    .metrics{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .metric{
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+    .metric .n{
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.6px;
+      margin: 0 0 6px;
+      background: linear-gradient(135deg, rgba(110,231,255,1), rgba(167,139,250,1));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .metric .d{ margin:0; color: var(--muted); font-size: 14px; line-height:1.6; font-weight: 700; }
+
+    /* Closing section */
+    .closing{
+      padding: 10px 0 44px;
+    }
+    .closingCard{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display:flex;
+      gap: 16px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .closingCard h3{
+      margin:0 0 8px;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.2px;
+    }
+    .closingCard p{
+      margin:0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 700;
+      max-width: 72ch;
+    }
+    .closingActions{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .footer{
+      padding: 22px 0 44px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* Animations */
+    .reveal{
+      opacity: 0;
+      transform: translateY(10px);
+      transition: 520ms ease;
+    }
+    .reveal.on{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .role{ grid-template-columns: 1fr; }
+      .aside{ text-align:left; }
+      .grid3{ grid-template-columns: 1fr; }
+      .metrics{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="wrap navbar">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="dot"></span>
+        <span id="brandName">Sukhvinder Singh</span>
+      </a>
+
+      <div class="links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Case studies</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certs">Certifications</a>
+      </div>
+
+      <div class="cta">
+        <a class="btn" id="btnLinkedIn" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top" class="wrap">
+    <header class="hero">
+      <div class="heroGrid">
+        <div class="panel heroMain reveal">
+          <div class="spark"></div>
+
+          <div class="badgeRow">
+            <div class="badge" id="badgeRole">Senior IT Service Delivery & Operations Leader</div>
+            <div class="badge" id="badgeLocation">United Kingdom</div>
+            <div class="badge" id="badgeFocus">SLA, governance, cost and risk optimisation</div>
+          </div>
+
+          <h1 class="h1" id="heroTitle">I lead resilient, scalable IT services that deliver measurable outcomes.</h1>
+          <p class="lead" id="heroLead"></p>
+
+          <div class="heroActions">
+            <a class="btn primary" href="#projects">See case studies</a>
+            <a class="btn" id="btnEmail" href="#">Email</a>
+          </div>
+        </div>
+
+        <aside class="panel heroSide reveal">
+          <div class="photo">
+            <img id="heroImage" alt="Professional cover image" src="img/headshot.jpg" />
+            <div class="photoOverlay">
+              <div class="photoTag" id="photoTag">Service excellence. Security aligned. Outcome driven.</div>
+            </div>
+          </div>
+
+          <div class="quickStats">
+            <div class="statRow">
+              <div class="k">Specialty</div>
+              <div class="v" id="statSpecialty">Global IT Ops and Service Delivery</div>
+            </div>
+            <div class="statRow">
+              <div class="k">Strength</div>
+              <div class="v" id="statStrength">ITIL, Vendor Governance, Stakeholder Management, Security Controls, Cost Optimisation</div>
+            </div>
+            <div class="statRow">
+              <div class="k">Scope</div>
+              <div class="v" id="statScope">5,000+ users, £0.8M budget, global delivery</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="sectionTitle">
+        <h2>About</h2>
+        <p id="aboutHint"></p>
+      </div>
+
+      <div class="grid3">
+        <div class="card reveal">
+          <h3>What I do</h3>
+          <p id="aboutWhat"></p>
+        </div>
+        <div class="card reveal">
+          <h3>How I lead</h3>
+          <p id="aboutHow"></p>
+        </div>
+        <div class="card reveal">
+          <h3>What I deliver</h3>
+          <p id="aboutCare"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="sectionTitle">
+        <h2>Expertise</h2>
+        <p>Clear strengths that show what you are known for.</p>
+      </div>
+
+      <div class="grid3" id="expertiseGrid"></div>
+    </section>
+
+    <section id="experience">
+      <div class="sectionTitle">
+        <h2>Experience</h2>
+        <p>Focused on scope, leadership, and measurable outcomes.</p>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="projects">
+      <div class="sectionTitle">
+        <h2>Case studies</h2>
+        <p>Three examples showing how I improve service performance, reduce cost, and increase visibility through governance and automation.</p>
+      </div>
+
+      <div class="grid3" id="caseStudiesGrid"></div>
+    </section>
+
+    <section id="achievements">
+      <div class="sectionTitle">
+        <h2>Achievements</h2>
+        <p>Real wins with scope and measurable impact.</p>
+      </div>
+
+      <div class="metrics" id="metrics"></div>
+    </section>
+
+    <section id="certs">
+      <div class="sectionTitle">
+        <h2>Certifications</h2>
+        <p>Selected certifications from my CV.</p>
+      </div>
+
+      <div class="grid3" id="certsGrid"></div>
+    </section>
+
+    <section class="closing">
+      <div class="closingCard reveal">
+        <div>
+          <h3>Work with me</h3>
+          <p id="closingText"></p>
+        </div>
+
+        <div class="closingActions">
+          <a class="btn primary" id="closingLinkedIn" href="#" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+          <a class="btn" href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> <span id="footerName">Sukhvinder Singh</span></div>
+        <div style="color:rgba(255,255,255,0.48)">Built with a focus on clarity, impact, and service outcomes.</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const data = {
+      name: "Sukhvinder Singh",
+      role: "Senior IT Service Delivery & Operations Leader",
+      location: "United Kingdom",
+      focus: "SLA, governance, cost and risk optimisation",
+
+      heroImageUrl: "img/headshot.jpg",
+      photoTag: "Service excellence. Security aligned. Outcome driven.",
+
+      heroTitle: "I lead resilient, scalable IT services that deliver measurable outcomes.",
+      heroLead:
+        "Senior IT Service Delivery and Operations leader (15+ years) driving SLA based global support, ITIL governance, and cost optimised modern workplace and cloud services. Proven in major incident leadership, vendor and contract governance, ISO27001 aligned controls, and executive stakeholder management, translating priorities into measurable improvements in SLA performance, cost, and risk.",
+
+      stats: {
+        specialty: "Global IT Ops and Service Delivery",
+        strength: "ITIL, Major Incidents, Vendor Governance, Stakeholder Management, Annual Budgets, Agile, Cost Optimisation, DLP, Security Controls & EDR, Disaster Recovery & Business continuity",
+        scope: "5,000+ users, £0.8M budget, global delivery"
+      },
+
+      linkedinUrl: "https://www.linkedin.com/in/sukhvinder-singhk",
+
+      email: "",
+
+      about: {
+        hint: "A credible snapshot of what I do, how I lead, and the results I deliver.",
+        what:
+          "At Climate Impact Partners I led IT Operations and Service Delivery across enterprise environments, owning end to end service performance across Deskside Support, Microsoft 365, Azure operations, and security controls. I ran the operating model, governance, and vendor management that kept services reliable for a multi region workforce, including executive support. My focus was measurable outcomes: stronger SLAs, smoother user experience, improved audit readiness, and tighter cost control.",
+        how:
+          "I run practical ITIL governance across incident, problem, and change with clear ownership, simple controls, and a steady operating rhythm. I manage service performance through SLAs and KPIs, using trend data to prioritise what to fix and where to invest. During major incidents I lead end to end response with calm coordination and clear stakeholder communications until service is restored. I drive strong follow up through PIRs, actionable problem records, and a CSI roadmap so improvements are delivered, repeat issues reduce, and SLA performance moves in the right direction.",
+        care:
+          "I deliver reliable, measurable IT services that improve user experience while reducing cost and risk. That means stronger SLA and KPI performance, faster incident recovery, and fewer repeat issues through effective problem management and continuous improvement. I build clear SOPs and operational policies that standardise how teams work, improve consistency, and support smooth onboarding and transitions. I also deliver tighter vendor governance, clearer reporting, and security aligned controls that improve audit readiness."
+      },
+
+      expertise: [
+        {
+          title: "Service Delivery Leadership",
+          desc: "Lead global SLA driven support across onshore and offshore teams, setting clear operating rhythms, ownership, and service quality standards. Manage stakeholders from day to day contacts to senior executives, aligning priorities and expectations through transparent reporting and governance. Deliver smooth service transitions and handovers, ensuring people, process, and tooling are aligned so performance remains stable before, during, and after change.",
+          tags: ["SLA governance", "Executive support", "Global teams"]
+        },
+        {
+          title: "ITIL and Major Incidents",
+          desc: "Own ITIL based incident, problem, and change governance with clear controls, communication, and accountability. Lead major incidents end to end, run structured PIRs, and turn findings into practical fixes through a prioritised CSI roadmap. Focus on reducing repeat incidents, improving SLA performance, and making improvements sustainable through measurable actions and follow up.",
+          tags: ["Major incidents", "PIRs", "CSI roadmap", "ServiceNow", "Remedy", "Freshworks"]
+        },
+        {
+          title: "Modern Workplace and Cloud",
+          desc: "Operational leadership across Microsoft 365 and Azure services, covering identity, endpoint management, collaboration tooling, and day to day cloud service reliability. Drive secure and consistent device and access experiences using Intune and modern management practices, supporting hybrid environments and remote work at scale. Partner with security and business teams to balance user experience, performance, and controls, and use monitoring and service metrics to reduce incidents and improve availability.",
+          tags: ["Azure", "Microsoft 365", "Intune", "Microsoft Purview", "Azure DevOps", "Dynamics 365"]
+        },
+        {
+          title: "Security and Compliance",
+          desc: "Implement and strengthen ISO27001 aligned controls across endpoints, access, and operational processes, ensuring policies are practical and measurable. Deploy and manage EDR and DLP capabilities to improve threat detection, reduce data leakage risk, and increase visibility across the environment. Work closely with stakeholders to close audit findings.",
+          tags: ["ISO27001", "EDR", "DLP", "Check Point", "Darktrace", "ThreatAware", "Intruder", "Malwarebytes"]
+        },
+        {
+          title: "Commercial and Vendor Governance",
+          desc: "Own IT budgets with a focus on value, cost control, and service stability. Lead contract renewals and commercial negotiations, using service performance data to challenge costs and improve outcomes. Drive licence optimisation across the estate to remove waste, improve compliance, and align spend to real usage. Run structured supplier governance through QBRs, SLAs, escalation paths, and performance scorecards to ensure vendors deliver consistently and risks are actively managed.",
+          tags: ["£0.8M budget", "QBRs", "Contract negotiation"]
+        },
+        {
+          title: "Insights and Automation",
+          desc: "Build Power BI dashboards that turn service data into clear KPIs for leaders, covering SLA performance, incident trends, backlog health, and supplier outcomes. Use PowerShell automation to extract, clean, and standardise data from operational tools, reducing manual reporting effort and improving consistency. Enable faster decision making through scheduled reporting, trend insights, and a CSI focused view of what to fix next.",
+          tags: ["Power BI", "PowerShell", "KPI visibility", "Service KPI dashboards", "SLA analytics"]
+        }
+      ],
+
+      experience: [
+        {
+          title: "Head of IT Operations, Climate Impact Partners",
+          time: "Aug 2023 to Dec 2025",
+          where: "Scope: IT Ops for about 200 users across multiple regions. Budget about £0.8M. Led a 6 person team plus MSPs.",
+          bullets: [
+            "Raised SLA compliance by 25% by redesigning ITSM workflows, tightening triage, and implementing service performance governance.",
+            "Delivered 18% run cost reduction through vendor renegotiation, licence rationalisation, and cloud optimisation.",
+            "Strengthened security posture by implementing ISO27001 aligned controls and deploying a modern EDR capability, improving audit readiness and risk visibility.",
+            "Integrated a US support function into a unified global operating model, enabling follow the sun coverage.",
+            "Implemented automated Power BI executive dashboards to drive performance reviews, trend analysis, and CSI prioritisation."
+          ]
+        },
+        {
+          title: "Service Delivery Manager, Tata Consultancy Services",
+          time: "Jun 2011 to Jul 2023",
+          where: "Scope: Managed 5 global clients. Led 30 person onshore and offshore teams. Supported about 5,000 users. Governed about 10 key vendors.",
+          bullets: [
+            "Delivered SLA driven services for global enterprise clients through structured governance and proactive problem management.",
+            "Automated KPI reporting using PowerShell and Power BI, saving about €70,000 per year and improving leadership visibility.",
+            "Led large scale OS migration programmes (Windows 8 to Windows 10) for major airlines, coordinating rollout, communications, hypercare, and issue resolution.",
+            "Delivered white glove executive support and managed AV systems for senior leadership.",
+            "Recognised as Performer of the Year and Best Onsite Support for outcomes and stakeholder satisfaction."
+          ]
+        }
+      ],
+
+      caseStudies: [
+        {
+          title: "SLA Performance Turnaround",
+          context: "Climate Impact Partners",
+          image: "img/SLA.jpg",
+          challenge: [
+            "SLA performance needed a measurable uplift and clearer governance.",
+            "Triage and ITSM workflows were not consistently driving fast resolution."
+          ],
+          actions: [
+            "Redesigned ITSM workflows and tightened triage to reduce delays and rework.",
+            "Implemented service performance governance with clear KPIs, ownership, and review cadence.",
+            "Strengthened major incident discipline with PIRs and a CSI roadmap."
+          ],
+          results: [
+            "Raised SLA compliance by 25%.",
+            "Improved accountability and reliability through a clearer operating rhythm."
+          ],
+          tags: ["ITIL", "ITSM", "Major incidents", "CSI", "SLA"]
+        },
+        {
+          title: "Run Cost Optimisation with Service Stability",
+          context: "Climate Impact Partners",
+          image: "img/costoptimization.jpg",
+          challenge: [
+            "Needed to reduce run costs while protecting user experience and service performance.",
+            "Vendor and licence spend required stronger control and visibility."
+          ],
+          actions: [
+            "Renegotiated vendors and strengthened supplier governance with SLAs, escalations, and QBRs.",
+            "Rationalised licences and optimised cloud spend with cost transparency.",
+            "Aligned spend decisions to service performance and business risk."
+          ],
+          results: [
+            "Delivered 18% run cost reduction.",
+            "Improved cost visibility and stronger control over renewals and contracts."
+          ],
+          tags: ["Vendor governance", "Licence optimisation", "Cloud optimisation", "Budget ownership"]
+        },
+        {
+          title: "Executive KPI and Dashboard Automation",
+          context: "Climate Impact Partners and Tata Consultancy Services",
+          image: "img/dashboard.jpg",
+          challenge: [
+            "Leadership needed faster, more reliable visibility into service trends and performance.",
+            "Manual reporting was time consuming and inconsistent."
+          ],
+          actions: [
+            "Built automated Power BI dashboards for performance reviews and trend analysis.",
+            "Automated KPI reporting using PowerShell and Power BI to reduce manual effort.",
+            "Used insights to prioritise CSI and improve stakeholder decision making."
+          ],
+          results: [
+            "Saved about €70,000 per year through reporting automation.",
+            "Improved decision making with consistent KPI and SLA visibility."
+          ],
+          tags: ["Power BI", "PowerShell", "KPI reporting", "Executive reporting"]
+        }
+      ],
+
+      achievements: [
+        { number: "15+ years", detail: "Leading IT Operations and Service Delivery across enterprise environments." },
+        { number: "25% ↑", detail: "SLA compliance improvement through ITSM workflow and governance redesign." },
+        { number: "18% ↓", detail: "Run cost reduction via vendor renegotiation, licence rationalisation, and cloud optimisation." },
+        { number: "£70k", detail: "Estimated annual savings through reporting automation, contract negotiation and licence optimisation." },
+        { number: "5,000", detail: "Users supported across global enterprise clients with onshore and offshore delivery." },
+        { number: "£0.8M", detail: "Annual budget scope owned for IT Operations in a multi region environment." }
+      ],
+
+      certifications: [
+        { title: "AWS Solution Architect Associate", note: "2023" },
+        { title: "Lean Six Sigma", note: "2023" },
+        { title: "PRINCE2 Foundation and Practitioner", note: "2022" },
+        { title: "ITIL Certified", note: "2014" },
+        { title: "MCSE", note: "Microsoft Certified Systems Engineer" }
+      ],
+
+      closingText:
+        "I help organisations stabilise IT operations, improve SLA and KPI performance, and deliver measurable service outcomes through strong governance, automation, and supplier management. If you would like to connect or discuss a role or engagement, reach out on LinkedIn."
+    };
+
+    const setText = (id, value) => { const el = document.getElementById(id); if(el) el.textContent = value; };
+    const setHref = (id, value) => { const el = document.getElementById(id); if(el) el.href = value; };
+    const setSrc = (id, value) => { const el = document.getElementById(id); if(el) el.src = value; };
+
+    setText("brandName", data.name);
+    setText("footerName", data.name);
+    setText("badgeRole", data.role);
+    setText("badgeLocation", data.location);
+    setText("badgeFocus", data.focus);
+
+    setText("heroTitle", data.heroTitle);
+    setText("heroLead", data.heroLead);
+
+    setSrc("heroImage", data.heroImageUrl);
+    setText("photoTag", data.photoTag);
+
+    setText("statSpecialty", data.stats.specialty);
+    setText("statStrength", data.stats.strength);
+    setText("statScope", data.stats.scope);
+
+    setHref("btnLinkedIn", data.linkedinUrl);
+    setHref("closingLinkedIn", data.linkedinUrl);
+
+    if (data.email && data.email.trim().length > 0) {
+      setHref("btnEmail", `mailto:${data.email}`);
+    } else {
+      const btnEmail = document.getElementById("btnEmail");
+      if (btnEmail) btnEmail.style.display = "none";
+    }
+
+    setText("aboutHint", data.about.hint);
+    setText("aboutWhat", data.about.what);
+    setText("aboutHow", data.about.how);
+    setText("aboutCare", data.about.care);
+
+    setText("closingText", data.closingText);
+
+    const expertiseGrid = document.getElementById("expertiseGrid");
+    expertiseGrid.innerHTML = "";
+    data.expertise.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "card reveal";
+      card.innerHTML = `
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+        <div class="tags">
+          ${item.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+        </div>
+      `;
+      expertiseGrid.appendChild(card);
+    });
+
+    const timeline = document.getElementById("timeline");
+    timeline.innerHTML = "";
+    data.experience.forEach(r => {
+      const el = document.createElement("div");
+      el.className = "role reveal";
+      el.innerHTML = `
+        <div>
+          <h3>${r.title}</h3>
+          <p class="meta">${r.where}</p>
+          <ul class="bullets">
+            ${r.bullets.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+        <div class="aside">
+          <div>${r.time}</div>
+        </div>
+      `;
+      timeline.appendChild(el);
+    });
+
+    const caseStudiesGrid = document.getElementById("caseStudiesGrid");
+    caseStudiesGrid.innerHTML = "";
+    data.caseStudies.forEach(cs => {
+      const el = document.createElement("div");
+      el.className = "card reveal";
+      el.innerHTML = `
+        <div class="caseHead">
+          <h3 style="margin:0;">${cs.title}</h3>
+          <span class="pill">Case study</span>
+        </div>
+
+        <p class="caseContext">${cs.context}</p>
+
+        <div class="caseImage">
+          <img alt="${cs.title} image" src="${cs.image}" />
+        </div>
+
+        <div style="margin-top: 12px; display:grid; gap: 10px;">
+          <div>
+            <div class="subTitle">Challenge</div>
+            <ul class="miniList">
+              ${cs.challenge.map(x => `<li>${x}</li>`).join("")}
+            </ul>
+          </div>
+
+          <div>
+            <div class="subTitle">What I did</div>
+            <ul class="miniList">
+              ${cs.actions.map(x => `<li>${x}</li>`).join("")}
+            </ul>
+          </div>
+
+          <div>
+            <div class="subTitle">Results</div>
+            <ul class="miniList">
+              ${cs.results.map(x => `<li>${x}</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+
+        <div class="tags">
+          ${cs.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+        </div>
+      `;
+      caseStudiesGrid.appendChild(el);
+    });
+
+    const metrics = document.getElementById("metrics");
+    metrics.innerHTML = "";
+    data.achievements.forEach(m => {
+      const el = document.createElement("div");
+      el.className = "metric reveal";
+      el.innerHTML = `
+        <div class="n">${m.number}</div>
+        <p class="d">${m.detail}</p>
+      `;
+      metrics.appendChild(el);
+    });
+
+    const certsGrid = document.getElementById("certsGrid");
+    certsGrid.innerHTML = "";
+    data.certifications.forEach(c => {
+      const el = document.createElement("div");
+      el.className = "card reveal";
+      el.innerHTML = `
+        <h3>${c.title}</h3>
+        <p>${c.note}</p>
+        <div class="tags">
+          <span class="tag">Verified</span>
+        </div>
+      `;
+      certsGrid.appendChild(el);
+    });
+
+    setText("year", String(new Date().getFullYear()));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if(en.isIntersecting) en.target.classList.add("on");
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
